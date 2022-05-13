@@ -8,7 +8,7 @@ import {
 
 export const allTodoAC = () => async (dispatch) => {
   try {
-    const response = await fetch("/todos/alltodos");
+    const response = await fetch("https://react-redux-fullstack-todo.herokuapp.com/todos/alltodos");
 
     if (response.ok) {
       const result = await response.json();
@@ -29,7 +29,7 @@ export const addTodoAC = (data) => async (dispatch) => {
         message.innerHTML = "";
       }, 2000);
     }
-    const response = await fetch("/todos/addtodo", {
+    const response = await fetch("https://react-redux-fullstack-todo.herokuapp.com/todos/addtodo", {
       method: "POST",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify(data),
@@ -46,7 +46,7 @@ export const addTodoAC = (data) => async (dispatch) => {
 
 export const removeTodoAC = (id) => async (dispatch) => {
   try {
-    const response = await fetch(`/todos/removetodo/${id}`, {
+    const response = await fetch(`https://react-redux-fullstack-todo.herokuapp.com/todos/removetodo/${id}`, {
       method: "DELETE",
     });
     if (response.ok) {
@@ -59,7 +59,7 @@ export const removeTodoAC = (id) => async (dispatch) => {
 
 export const changeStatusTodoAC = (id) => async (dispatch) => {
   try {
-    const response = await fetch('/todos/changestatus/', {
+    const response = await fetch('https://react-redux-fullstack-todo.herokuapp.com/todos/changestatus', {
       method: 'PATCH',
       headers: { "Content-type": "application/json" },
       body: JSON.stringify({id:id}),
@@ -75,7 +75,7 @@ export const changeStatusTodoAC = (id) => async (dispatch) => {
 
 export const updateTodoAC = (data) => async (dispatch) => {
   try {
-    const response = await fetch('/todos/updatetodo', {
+    const response = await fetch('https://react-redux-fullstack-todo.herokuapp.com/todos/updatetodo', {
       method: 'PUT',
       headers: { "Content-type": "application/json" },
       body: JSON.stringify(data)

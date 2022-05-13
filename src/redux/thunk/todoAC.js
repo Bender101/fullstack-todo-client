@@ -21,6 +21,14 @@ export const allTodoAC = () => async (dispatch) => {
 
 export const addTodoAC = (data) => async (dispatch) => {
   try {
+    if (!data.name || !data.text) {
+      const message = document.querySelector(".form-message");
+      message.innerHTML =
+        "Поля не должны быть пустыми";
+      setTimeout(() => {
+        message.innerHTML = "";
+      }, 2000);
+    }
     const response = await fetch("/todos/addtodo", {
       method: "POST",
       headers: { "Content-type": "application/json" },
@@ -29,6 +37,7 @@ export const addTodoAC = (data) => async (dispatch) => {
     if (response.ok) {
       const result = await response.json();
       dispatch(addTodo(result));
+      alert('Успешное добавление!')
     }
   } catch (error) {
     console.log(error);
@@ -73,6 +82,9 @@ export const updateTodoAC = (data) => async (dispatch) => {
     })
     if (response.ok) {
       const result = await response.json();
+      if (result.message === 'not valid') {
+      alert('Вы ввели тоже самое')
+      }
       dispatch(updateTodo(result))
     }
   } catch (error) {

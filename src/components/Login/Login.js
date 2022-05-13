@@ -75,7 +75,7 @@ const Login = () => {
             <button type="submit" className="btn btn-primary">
               Submit
             </button>
-            <div className="message"></div>
+            <div className="login-message"></div>
           </form>
         )}
       </div>

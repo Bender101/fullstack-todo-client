@@ -1,7 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import "./App.css";
-import TodoForm from "./components/TodoForm/TodoForm";
-import TodoList from "./components/TodoList/TodoList";
+import Container from "./components/Container/Container";
 import { checkUserAC } from "./redux/thunk/loginAC";
 
 function App() {
@@ -14,7 +13,7 @@ function App() {
 
   return (
     <div className="App">
-      <TodoList />
+      <Container/>
     </div>
   );
 }

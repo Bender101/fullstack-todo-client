@@ -15,16 +15,13 @@ const TodoForm = () => {
     }));
   };
 
-
   const submitHandler = (e) => {
     e.preventDefault();
     dispatch(addTodoAC(inputs));
   };
 
-
   return (
     <div className="todo-form mb-4">
-          
       <form onSubmit={submitHandler} className="todo-form mb-4">
         <div className="mb-3">
           <label htmlFor="exampleInputName1" className="form-label">
@@ -66,12 +63,10 @@ const TodoForm = () => {
           />
         </div>
 
-        <button
-          type="submit"
-          className="btn btn-primary"
-        >
+        <button type="submit" className="btn btn-primary">
           Submit
         </button>
+        <div className="form-message"></div>
       </form>
     </div>
   );

@@ -1,4 +1,6 @@
 .todo-container {
+  position: relative;
+  min-height: 150px;
   margin-bottom: 10px;
   display: flex;
   flex-direction: row;
@@ -18,4 +20,12 @@
 .completed {
   color: rgba(184, 177, 177, 0.713);
   text-decoration: line-through;
+}
+
+p {
+  margin-bottom: 3px;
+}
+
+.updated-status {
+  color: rgb(186, 136, 136);
 }

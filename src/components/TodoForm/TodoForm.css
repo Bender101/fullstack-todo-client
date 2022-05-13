@@ -1,3 +1,11 @@
 .todo-form {
+  min-height: 330px;
   width: 400px;
+  margin-bottom: 30px;
+}
+
+.form-message {
+  color: red;
+  margin-bottom: 0 auto;
+
 }

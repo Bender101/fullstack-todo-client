@@ -4,7 +4,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { allTodoAC } from "../../redux/thunk/todoAC";
 import Pagination from "../Pagination/Pagination";
 import Todo from "../Todo/Todo";
-import TodoForm from "../TodoForm/TodoForm";
 import {
   emailAsc,
   emailDesc,
@@ -13,7 +12,6 @@ import {
   statusAsc,
   statusDesc,
 } from "../../redux/actions/filters";
-import Login from "../Login/Login";
 
 const TodoList = () => {
   const [currPage, setCurrPage] = useState(1);
@@ -54,10 +52,7 @@ const TodoList = () => {
 
   return (
     <div>
-      <div className="forms">
-        <TodoForm />
-        <Login />
-      </div>
+     
       <div>
         <select
           onChange={changeSelectHandler}
@@ -81,6 +76,7 @@ const TodoList = () => {
           email={todo.email}
           text={todo.text}
           status={todo.status}
+          updated={todo.updated}
         />
       ))}
       <Pagination

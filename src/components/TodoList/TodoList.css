@@ -1,0 +1,11 @@
+select {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.forms {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}

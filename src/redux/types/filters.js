@@ -1,0 +1,6 @@
+export const NAME_ASC = 'NAME_ASC'
+export const NAME_DESC = 'NAME_DESC'
+export const EMAIL_ASC = 'EMAIL_ASC'
+export const EMAIL_DESC = 'EMAIL_DESC'
+export const STATUS_ASC = 'STATUS_ASC'
+export const STATUS_DESC = 'STATUS_DESC'
